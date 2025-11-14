@@ -17,7 +17,7 @@ def convert_to_hours_minutes(decimal_hours):
     return f"{hours}h {minutes}m"
 
 # Dataset path
-FILEPATH = r"C:\Users\amate\OneDrive\Desktop\stock price predictor 2\PLANE\flight_delay_dataset.csv"
+FILEPATH = "https://raw.githubusercontent.com/kshitij-amate/flight_delay-prediction/main/flight_delay_dataset.csv"
 
 # Load dataset
 df = pd.read_csv(FILEPATH)
@@ -94,4 +94,5 @@ if st.button("Predict"):
 
     st.success("Prediction Completed!")
     st.write(f"### ⏱ Decimal Predicted Hours: **{result:.2f}**")
+
     st.write(f"### ⏳ Readable Format: **{readable}**")
